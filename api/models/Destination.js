@@ -18,6 +18,10 @@ module.exports = {
     interval : { type: 'json' },
     order: {
       model: 'Order'
+    },
+    mode: {
+      type: 'string',
+      enum: ['pickup', 'delivery']
     }
   }
 };
