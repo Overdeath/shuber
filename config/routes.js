@@ -56,6 +56,7 @@ module.exports.routes = {
 
 
   /**    Orders   **/
+  ,'GET /order': 'OrderController.createOrderView'
   ,'GET /order/:id': 'OrderController.show'
   ,'POST /order': 'OrderController.create'
   ,'GET /orders': 'OrderController.index'

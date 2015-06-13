@@ -7,6 +7,16 @@
 
 module.exports = {
 
+  createOrderView: function (req, res) {
+    return res.view(
+      'createOrder',
+      {
+        layout: 'layoutOrder',
+        bodyClass: ''
+      }
+    );
+  },
+
 
   /**
    * `OrderController.index()`

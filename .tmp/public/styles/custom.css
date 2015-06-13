@@ -25,3 +25,19 @@
         margin-top: 71px;
     }
 }
+
+
+.img-package-size {
+    width: 130px;
+    cursor:pointer;
+    padding: 2px;
+}
+.img-package-size:hover {
+    border: 2px solid #005983;
+    padding: 0px;
+}
+
+.img-package-size-selected {
+    border: 2px solid #2b542c;
+    padding: 0px;
+}
