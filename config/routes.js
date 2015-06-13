@@ -46,4 +46,6 @@ module.exports.routes = {
   *                                                                          *
   ***************************************************************************/
 
+  ,'get /user/:id' : 'UserController.driverDetails'
+
 };
