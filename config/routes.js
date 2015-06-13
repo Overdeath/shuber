@@ -49,4 +49,9 @@ module.exports.routes = {
   ,'GET /user/find/:id' : 'UserController.driverDetails'
   ,'GET  /user/create' : 'UserController.create'
 
+
+
+
+  ,'POST /order/new': {controller: "Order", action: "newOrderAction"}
+  ,'GET /order/:id': {controller: "Order", action: "viewOrderAction"}
 };
