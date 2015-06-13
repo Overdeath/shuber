@@ -48,4 +48,9 @@ module.exports.routes = {
 
   ,'get /user/:id' : 'UserController.driverDetails'
 
+
+
+
+  ,'POST /order/new': {controller: "Order", action: "newOrderAction"}
+  ,'GET /order/:id': {controller: "Order", action: "viewOrderAction"}
 };
