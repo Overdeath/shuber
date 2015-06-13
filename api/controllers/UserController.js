@@ -6,8 +6,26 @@
  */
 
 module.exports = {
+
   driverDetails: function (request, response) {
-    return response.send('Hi there');
+    return response.send('Hi the11re');
   }
+
+  , create: function (request, response) {
+    var params = request.params.all();
+
+    User.create({
+      name : "Bogdan",
+      email: "bogdan.rancichi@emag.ro"
+    }).exec(function createUser(error, created) {
+      console.log(error);
+      console.log(created);
+    });
+
+    return response.json({
+      message : 'User created'
+    });
+  }
+
 };
 

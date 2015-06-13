@@ -46,7 +46,8 @@ module.exports.routes = {
   *                                                                          *
   ***************************************************************************/
 
-  ,'get /user/:id' : 'UserController.driverDetails'
+  ,'GET /user/find/:id' : 'UserController.driverDetails'
+  ,'GET  /user/create' : 'UserController.create'
 
 
   ,'GET /order': 'OrderController.viewOrderAction'
