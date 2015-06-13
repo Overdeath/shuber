@@ -1,0 +1,27 @@
+.login-bg {
+    background: url("../images/map-vector.png");
+}
+.navbar-default .navbar-brand{
+    margin: 14px 14px 5px 14px;
+    background: url("../images/logo-horizontal.png") no-repeat;
+    padding-left: 110px;
+    padding-top: 0px;
+    color: #b4201f;
+    font-size: 20px;
+}
+
+
+.navbar {
+    min-height: 70px;
+}
+
+.top-slogan {
+    font-size: 13px;
+    color: #666;
+}
+
+@media (min-width: 768px) {
+    .sidebar {
+        margin-top: 71px;
+    }
+}

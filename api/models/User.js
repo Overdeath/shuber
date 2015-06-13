@@ -6,6 +6,7 @@
 */
 
 module.exports = {
+  autoPK: false,
 
   attributes: {
     id : {
@@ -32,11 +33,31 @@ module.exports = {
       defaultsTo: 'assets/images/defaultUser.png'
     },
 
+    phone: {
+      type : 'string',
+      required: true,
+      size: 10
+    },
+
     email: {
       type: 'email',
       unique: true,
       required: true
+    },
+
+    location: {
+      type: 'json'
     }
+
+    /*,afterCreate: function (user, callback) {
+      User.create({name:user.name, email: 'bogdan@bogdan.com'}).exec(function(error, created){});
+      callback();
+    },
+
+    afterValidate: function (user, callback) {
+      console.log(user);
+      callback();
+    }*/
 
   }
 };

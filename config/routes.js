@@ -46,10 +46,22 @@ module.exports.routes = {
   *                                                                          *
   ***************************************************************************/
 
-  ,'GET /user/find/:id' : 'UserController.driverDetails'
+  /**    User   **/
+  ,'GET /user/find/:id' : 'UserController.show'
+  ,'GET /user/type/:type' : 'UserController.filterByType'
+  ,'GET /user' : 'UserController.getAll'
   ,'GET  /user/create' : 'UserController.create'
+  ,'POST  /user/edit/:id' : 'UserController.edit'
+  ,'GET /user/delete/:id' : 'UserController.delete'
 
-
-  ,'GET /order': 'OrderController.viewOrderAction'
+  /**    Orders   **/
   ,'POST /order': 'OrderController.create'
+
+  /**    Vehicle   **/
+
+
+  /**    Login    **/
+  ,'GET /login' : 'LoginController.index'
+
+
 };

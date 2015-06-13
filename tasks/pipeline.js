@@ -15,6 +15,11 @@
 // (if you're using LESS with the built-in default config, you'll want
 //  to change `assets/styles/importer.less` instead.)
 var cssFilesToInject = [
+  'bower_components/bootstrap/dist/css/bootstrap.min.css',
+  'bower_components/metisMenu/dist/metisMenu.min.css',
+  'styles/sb-admin-2.css',
+  'styles/custom.css',
+  'bower_components/font-awesome/css/font-awesome.min.css',
   'styles/**/*.css'
 ];
 
@@ -22,7 +27,11 @@ var cssFilesToInject = [
 // Client-side javascript files to inject in order
 // (uses Grunt-style wildcard/glob/splat expressions)
 var jsFilesToInject = [
-  
+  'bower_components/jquery/dist/jquery.min.js',
+  'bower_components/bootstrap/dist/js/bootstrap.min.js',
+  'bower_components/metisMenu/dist/metisMenu.min.js',
+  'js/sb-admin-2.js',
+
   // Load sails.io before everything else
   'js/dependencies/sails.io.js',
 

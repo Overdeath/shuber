@@ -7,23 +7,44 @@
 
 module.exports = {
 
-  driverDetails: function (request, response) {
-    return response.send('Hi the11re');
-  }
+  getAll: function (request, response) {
+    return response.json({
+      todo: 'getAll() is not implemented yet!'
+    });
+  },
 
-  , create: function (request, response) {
+  show: function (request, response) {
+    return response.json({
+      todo: 'show() is not implemented yet!'
+    });
+  },
+
+  create: function (request, response) {
     var params = request.params.all();
 
-    User.create({
-      name : "Bogdan",
-      email: "bogdan.rancichi@emag.ro"
-    }).exec(function createUser(error, created) {
-      console.log(error);
-      console.log(created);
-    });
+    User.create(params).exec(function (error, created) {});
 
     return response.json({
-      message : 'User created'
+      message : 'User created',
+      params: params
+    });
+  },
+
+  edit: function (request, response) {
+    return response.json({
+      todo: 'edit() is not implemented yet!'
+    });
+  },
+
+  updateLocation: function (request, response) {
+    return response.json({
+      todo: 'updateLocation() not implemented yet!'
+    });
+  },
+
+  delete: function (request, response) {
+    return response.json({
+      todo: 'delete() is not implemented yet!'
     });
   }
 
