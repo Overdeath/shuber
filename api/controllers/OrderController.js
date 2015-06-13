@@ -8,7 +8,6 @@
 module.exports = {
 
 
-
   /**
    * `OrderController.index()`
    */
@@ -24,7 +23,22 @@ module.exports = {
    */
   create: function (req, res) {
 
-    var inPickup = Destination.create({
+    var hasPickup, hasDelivery;
+    var that = this;
+    Order.create().exec(function(err,created) {
+      that.orderAddDestination(created, 'pickup');
+      that.orderAddDestination(created, 'delivery');
+    });
+
+    return res.json({
+      todo: 'create() is not implemented yet!'
+    });
+  },
+
+
+  orderAddDestination: function(order, mode)
+  {
+    Destination.create({
       client: '12345',
       location: {
         'lat': 44.456789,
@@ -35,34 +49,10 @@ module.exports = {
       interval: {
         'start': '2015-06-13 12:45:00',
         'end': '2015-06-13 13:45:00'
-      }
-    }).exec(function(err,created) { console.log(created) });
-
-    var inDelivery = Destination.create({
-      client: '12345',
-      location: {
-        'lat': 44.456789,
-        'lng': 21.234456,
-        'details': 'Langa casa din pom2'
       },
-      type: '',
-      interval: {
-        'start': '2015-06-13 12:45:00',
-        'end': '2015-06-13 13:45:00'
-      }
-    }).exec(function(err,created) { console.log(created) });
-
-    console.log(inPickup);
-
-
-    Order.create({
-      pickup: inPickup,
-      delivery: inDelivery
-    }).exec(function(err,created) { created.save() });
-
-    return res.json({
-      todo: 'create() is not implemented yet!'
-    });
+      mode: mode,
+      order: order.id
+    }).exec(function(err,created) { });
   },
 
 

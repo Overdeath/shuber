@@ -16,12 +16,6 @@ module.exports = {
       enum: ['pending', 'assigned', 'inTransit', 'delivered', 'returned'],
       defaultsTo: 'pending'
     },
-    pickup: {
-      model: 'Destination'
-    },
-    delivery: {
-      model: 'Destination'
-    },
     driver: {
       type: 'string',
       defaultsTo: ''
