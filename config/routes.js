@@ -50,8 +50,6 @@ module.exports.routes = {
   ,'GET  /user/create' : 'UserController.create'
 
 
-
-
-  ,'POST /order/new': {controller: "Order", action: "newOrderAction"}
-  ,'GET /order/:id': {controller: "Order", action: "viewOrderAction"}
+  ,'GET /order': 'OrderController.viewOrderAction'
+  ,'POST /order': 'OrderController.create'
 };
