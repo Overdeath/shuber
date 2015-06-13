@@ -19,8 +19,7 @@ var cssFilesToInject = [
   'bower_components/metisMenu/dist/metisMenu.min.css',
   'styles/sb-admin-2.css',
   'styles/custom.css',
-  'bower_components/font-awesome/css/font-awesome.min.css',
-  'styles/**/*.css'
+  'bower_components/font-awesome/css/font-awesome.min.css'
 ];
 
 

@@ -54,8 +54,13 @@ module.exports.routes = {
   ,'POST  /user/edit/:id' : 'UserController.edit'
   ,'GET /user/delete/:id' : 'UserController.delete'
 
+
   /**    Orders   **/
+  ,'GET /order/:id': 'OrderController.show'
   ,'POST /order': 'OrderController.create'
+  ,'GET /orders': 'OrderController.index'
+  ,'DELETE /orders': 'OrderController.delete'
+  ,'PUT /orders/:id': 'OrderController.edit'
 
   /**    Vehicle   **/
 
