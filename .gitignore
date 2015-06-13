@@ -98,6 +98,8 @@ lib-cov
 *.pid
 *.lock
 npm-debug.log
+assets/database/*
+assets/monogodb.log.*
 
 
 
