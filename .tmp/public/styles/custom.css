@@ -54,8 +54,8 @@
 }
 @media (max-width: 360px) {
     .img-package-size {
-        width: 70px;
-        cursor:pointer;
-        padding: 2px;
+      width: 70px;
+      cursor: pointer;
+      padding: 2px;
     }
 }
