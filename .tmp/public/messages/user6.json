@@ -1,0 +1,13 @@
+{
+  "type": "user",
+  "name": "Ionel Paraschiv",
+  "picture": "",
+  "vehicle": false,
+  "rating": 0,
+  "email": "ionel@paraschiv.com",
+  "phone": "0723567835",
+  "current_location": {
+    "lat": 44.445996,
+    "lng": 26.011076
+  }
+}

@@ -1,0 +1,48 @@
+{
+  "id": 3,
+  "date_created": "2015-06-14 12:15:00",
+  "status": "assigned",
+  "pickup": {
+    "client": {
+      "id": 5,
+      "name": "Vasile Jivulescu",
+      "phone": "0723567845"
+    },
+    "location": {
+      "lat": 44.458472,
+      "lng": 26.140638,
+      "details": "Str. Magnoliei 109, vis-a-vis Parohia Catolica Sf. Anton"
+    },
+    "type": "small",
+    "interval" : {
+      "start": "2015-06-14 17:30:00",
+      "end" : "2015-06-14 18:30:00"
+    }
+  },
+  "delivery" : {
+    "client": {
+      "id": 6,
+      "name": "Ionel Paraschiv",
+      "phone": "0723567835"
+    },
+    "location": {
+      "lat": 44.445996,
+      "lng": 26.011076,
+      "details": "Str. Narciselor 2"
+    },
+    "interval" : {
+      "start": "2015-06-14 18:45:00",
+      "end" : "2015-06-14 19:45:00"
+    }
+  },
+  "driver": {
+    "id": 1,
+    "name": "Viorel Cristescu",
+    "phone": "0723567871",
+    "location": {
+      "lat": 44.426793,
+      "lng": 26.104790,
+      "details": "Blvd. Unirii, Unirea Shopping Center"
+    }
+  }
+}

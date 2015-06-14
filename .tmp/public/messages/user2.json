@@ -1,0 +1,13 @@
+{
+  "type": "user",
+  "name": "Alexandru Ionescu",
+  "picture": "",
+  "vehicle": false,
+  "rating": 0,
+  "email": "alexandru@ionescu.com",
+  "phone": "0723567884",
+  "current_location": {
+    "lat": 44.424334,
+    "lng": 26.060985
+  }
+}

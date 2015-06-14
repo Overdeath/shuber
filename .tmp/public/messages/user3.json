@@ -1,0 +1,13 @@
+{
+  "type": "user",
+  "name": "Maria Stancu",
+  "picture": "",
+  "vehicle": false,
+  "rating": 0,
+  "email": "maria@stancu.com",
+  "phone": "0723567861",
+  "current_location": {
+    "lat": 44.413167,
+    "lng": 26.137822
+  }
+}
