@@ -1,0 +1,17 @@
+{
+  "type": "driver",
+  "name": "Viorel Cristescu",
+  "picture": "",
+  "vehicle": {
+    "type": "car",
+    "make": "Ford Focus",
+    "license-plate": "B-777-EMG"
+  },
+  "rating": 4,
+  "email": "viorel@cristescu.com",
+  "phone": "0723567871",
+  "current_location": {
+    "lat": 44.426793,
+    "lng": 26.104790
+  }
+}

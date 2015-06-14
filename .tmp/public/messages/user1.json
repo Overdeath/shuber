@@ -1,0 +1,13 @@
+{
+  "type": "user",
+  "name": "Ion Popescu",
+  "picture": "",
+  "vehicle": false,
+  "rating": 0,
+  "email": "ion@popescu.com",
+  "phone": "0723567891",
+  "current_location": {
+    "lat": 44.413167,
+    "lng": 26.137822
+  }
+}

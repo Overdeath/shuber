@@ -1,0 +1,13 @@
+{
+  "type": "user",
+  "name": "Viorel Ristea",
+  "picture": "",
+  "vehicle": false,
+  "rating": 0,
+  "email": "viorel@ristea.com",
+  "phone": "0723567854",
+  "current_location": {
+    "lat": 44.452231,
+    "lng": 26.070922
+  }
+}

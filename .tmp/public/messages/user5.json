@@ -1,0 +1,13 @@
+{
+  "type": "user",
+  "name": "Vasile Jivulescu",
+  "picture": "",
+  "vehicle": false,
+  "rating": 0,
+  "email": "vasile@jivulescu.com",
+  "phone": "0723567845",
+  "current_location": {
+    "lat": 44.458472,
+    "lng": 26.140638
+  }
+}
