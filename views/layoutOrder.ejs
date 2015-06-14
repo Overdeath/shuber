@@ -174,17 +174,29 @@
       $(this).addClass('img-package-size-selected');
     });
 
+    $('#pickup-map').locationpicker({
+        location: {latitude: 44.4890203, longitude: 26.126380100000016},
+        radius: 0,
+        inputBinding: {
+            latitudeInput: $('#pickup-lat'),
+            longitudeInput: $('#pickup-lon'),
+            radiusInput: $('#pickup-radius'),
+            locationNameInput: $('#pickup-address')
+        },
+        enableAutocomplete: true
+    });
 
-    $('#us2').locationpicker({
-      location: {latitude: 44.4890233, longitude: 26.126380100000006},
-      radius: 50,
-      inputBinding: {
-        latitudeInput: $('#us2-lat'),
-        longitudeInput: $('#us2-lon'),
-        radiusInput: $('#us2-radius'),
-        locationNameInput: $('#us2-address')
-      },
-      enableAutocomplete: true
+
+    $('#delivery-map').locationpicker({
+        location: {latitude: 44.4254152456291, longitude: 26.128988761342725},
+        radius: 0,
+        inputBinding: {
+            latitudeInput: $('#delivery-lat'),
+            longitudeInput: $('#delivery-lon'),
+            radiusInput: $('#delivery-radius'),
+            locationNameInput: $('#delivery-address')
+        },
+        enableAutocomplete: true
     });
   });
 </script>
