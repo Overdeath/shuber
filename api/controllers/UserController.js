@@ -46,6 +46,12 @@ module.exports = {
     return response.json({
       todo: 'delete() is not implemented yet!'
     });
+  },
+
+  index: function (request, response) {
+    return response.view('userIndex' ,{
+      bodyClass: '', layout: 'layoutOrder', pageTitle: 'My Account'
+    });
   }
 
 };

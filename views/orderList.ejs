@@ -1,0 +1,133 @@
+<!-- /.row -->
+<div class="row">
+  <div class="col-lg-12">
+
+        <div class="panel-group" id="accordion">
+          <div class="panel panel-default" id="order1">
+            <div class="panel-heading">
+              <h4 class="panel-title">
+                <a data-toggle="collapse" data-parent="#accordion"  href="#collapseOne"></a>
+              </h4>
+            </div>
+            <div id="collapseOne" class="panel-collapse collapse in">
+              <div class="panel-body" style="position: relative;">
+                <blockquote>
+                  <div>
+                    <p>Driver: <span class="panel-driver"></span> </p>
+                    <p>Phone number: <span class="panel-phone"></span> </p>
+                    <p>Vehicle: <span class="panel-vehicle"></span> </p>
+                  </div>
+                  <div style="position: absolute; right: 5px; top: 5px;;">
+                    <img src="/images/user2.jpg" width="50" />
+                  </div>
+                  <div style="clear:both"></div>
+                  <p>Current location:
+                    <br /><br /><h5 class="panel-map-title"></h5>
+                    <span class="mapLocation" id="panelLocation1" style="width: 100%; height: 150px; display: inline-block;"></span>
+                  </p>
+                </blockquote>
+              </div>
+            </div>
+          </div>
+          <div class="panel panel-default" id="order2">
+            <div class="panel-heading">
+              <h4 class="panel-title">
+                <a data-toggle="collapse" data-parent="#accordion" href="#collapseTwo"></a>
+              </h4>
+            </div>
+            <div id="collapseTwo" class="panel-collapse collapse">
+              <div class="panel-body" style="position: relative;">
+                <blockquote>
+                  <div>
+                    <p>Driver: <span class="panel-driver"></span> </p>
+                    <p>Phone number: <span class="panel-phone"></span> </p>
+                    <p>Vehicle: <span class="panel-vehicle"></span> </p>
+                  </div>
+                  <div style="position: absolute; right: 5px; top: 5px;;">
+                    <img src="/images/user2.jpg" width="50" />
+                  </div>
+                  <div style="clear:both"></div>
+                  <p>Current location:
+                    <br /><br /><h5 class="panel-map-title"></h5>
+                    <span class="mapLocation" id="panelLocation2" style="width: 100%; height: 150px; display: inline-block;"></span>
+                  </p>
+                </blockquote>
+              </div>
+            </div>
+          </div>
+          <div class="panel panel-default" id="order3">
+            <div class="panel-heading">
+              <h4 class="panel-title">
+                <a data-toggle="collapse" data-parent="#accordion" href="#collapseThree"></a>
+              </h4>
+            </div>
+            <div id="collapseThree" class="panel-collapse collapse">
+              <div class="panel-body" style="position: relative;">
+                <blockquote>
+                  <div>
+                    <p>Driver: <span class="panel-driver"></span> </p>
+                    <p>Phone number: <span class="panel-phone"></span> </p>
+                    <p>Vehicle: <span class="panel-vehicle"></span> </p>
+                  </div>
+                  <div style="position: absolute; right: 5px; top: 5px;;">
+                    <img src="/images/user2.jpg" width="50" />
+                  </div>
+                  <div style="clear:both"></div>
+                  <p>Current location:
+                    <br /><br /><h5 class="panel-map-title"></h5>
+                    <span class="mapLocation" id="panelLocation3" style="width: 100%; height: 150px; display: inline-block;"></span>
+                  </p>
+                </blockquote>
+              </div>
+            </div>
+          </div>
+      <!-- .panel-body -->
+    </div>
+    <!-- /.panel -->
+  </div>
+  <!-- /.col-lg-12 -->
+</div>
+<!-- /.row -->
+
+
+<script type="text/javascript">
+
+  function loadJSON(id)
+  {
+    $.getJSON('/messages/order'+id+'.json', function(data){
+      $('#order'+id+' .panel-title a').html('Order to: '+data.delivery.client.name+' (Status: '+data.status+')');
+      $('#order'+id+' .panel-driver').html(data.driver.name);
+      $('#order'+id+' .panel-phone').html(data.driver.phone);
+      $('#order'+id+' .panel-vehicle').html('B-777-EMG - Ford Focus');
+      $('#order'+id+' .panel-map-title').html(data.driver.location.details);
+
+      if (id == 1) {
+        $('#panelLocation' + id).locationpicker({
+          location: {latitude: data.driver.location.lat, longitude: data.driver.location.lng},
+          radius: 0,
+          enableAutocomplete: false
+        });
+      }
+      $('#panelLocation' + id).data('lat', data.driver.location.lat).data('lng', data.driver.location.lng);
+    });
+  }
+
+  $(document).ready(function(){
+    var orders = 3;
+    for (i=1; i<=orders; i++) {
+      loadJSON(i);
+    }
+
+    $(".panel-collapse").on('shown.bs.collapse', function () {
+      var lat = $(this).find('.mapLocation').data('lat');
+      var lng = $(this).find('.mapLocation').data('lng');
+
+      $(this).find('.mapLocation').locationpicker({
+        location: {latitude: lat, longitude: lng},
+        radius: 0,
+        enableAutocomplete: false
+      });
+    });
+
+  })
+</script>

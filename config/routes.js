@@ -32,9 +32,7 @@ module.exports.routes = {
   *                                                                          *
   ***************************************************************************/
 
-  '/': {
-    view: 'homepage'
-  }
+  '/': 'LoginController.index'
 
   /***************************************************************************
   *                                                                          *
@@ -47,6 +45,7 @@ module.exports.routes = {
   ***************************************************************************/
 
   /**    User   **/
+  ,'GET /user/index' : 'UserController.index'
   ,'GET /user/find/:id' : 'UserController.show'
   ,'GET /user/type/:type' : 'UserController.filterByType'
   ,'GET /user' : 'UserController.getAll'
@@ -59,7 +58,7 @@ module.exports.routes = {
   ,'GET /order': 'OrderController.createOrderView'
   ,'GET /order/:id': 'OrderController.show'
   ,'POST /order': 'OrderController.create'
-  ,'GET /orders': 'OrderController.index'
+  ,'GET /aorders': 'OrderController.index'
   ,'DELETE /orders': 'OrderController.delete'
   ,'PUT /orders/:id': 'OrderController.edit'
 

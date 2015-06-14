@@ -12,7 +12,8 @@ module.exports = {
       'createOrder',
       {
         layout: 'layoutOrder',
-        bodyClass: ''
+        bodyClass: '',
+        pageTitle: 'New order'
       }
     );
   },
@@ -22,11 +23,19 @@ module.exports = {
    * `OrderController.index()`
    */
   index: function (req, res) {
-    Order.find().exec(function (err, orders) {
-      return res.json({
-        orders: orders
-      });
-    });
+    //Order.find().exec(function (err, orders) {
+    //  return res.json({
+    //    orders: orders
+    //  });
+    //});
+    return res.view(
+      'orderList',
+      {
+        layout: 'layoutOrder',
+        bodyClass: '',
+        pageTitle: 'My Orders'
+      }
+    );
   },
 
   getPickupOrder: function (order) {
