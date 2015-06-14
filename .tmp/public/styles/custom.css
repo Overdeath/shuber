@@ -29,8 +29,9 @@
 }
 
 
+
 .img-package-size {
-    width: 130px;
+    width: 140px;
     cursor:pointer;
     padding: 2px;
 }
@@ -42,4 +43,19 @@
 .img-package-size-selected {
     border: 2px solid #2b542c;
     padding: 0px;
+}
+
+@media (max-width: 600px) {
+    .img-package-size {
+        width: 90px;
+        cursor:pointer;
+        padding: 2px;
+    }
+}
+@media (max-width: 360px) {
+    .img-package-size {
+        width: 70px;
+        cursor:pointer;
+        padding: 2px;
+    }
 }
